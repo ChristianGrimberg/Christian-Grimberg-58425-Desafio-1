@@ -15,11 +15,12 @@ public class Usuario
 		set
 		{
 			if(value.GetType() == typeof(int)) id = value;
+			else id = 0;
 		}
 	}
 
-	private string nombre;
-	public string Nombre
+	private string? nombre;
+	public string? Nombre
 	{
 		get
 		{
@@ -29,11 +30,12 @@ public class Usuario
 		set
 		{
 			if(!string.IsNullOrEmpty(value)) nombre = value;
+			else nombre = string.Empty;
 		}
 	}
 	
-	private string apellido;
-	public string Apellido
+	private string? apellido;
+	public string? Apellido
 	{
 		get
 		{
@@ -43,11 +45,12 @@ public class Usuario
 		set
 		{
 			if(!string.IsNullOrEmpty(value)) apellido = value;
+			else apellido = string.Empty;
 		}
 	}
 
-	private string nombreUsuario;
-	public string NombreUsuario
+	private string? nombreUsuario;
+	public string? NombreUsuario
 	{
 		get
 		{
@@ -57,11 +60,12 @@ public class Usuario
 		set
 		{
 			if(!string.IsNullOrEmpty(value)) nombreUsuario = value;
+			else nombreUsuario = string.Empty;
 		}
 	}
 
-	private string contraseña;
-	public string Contraseña
+	private string? contraseña;
+	public string? Contraseña
 	{
 		get
 		{
@@ -71,11 +75,12 @@ public class Usuario
 		set
 		{
 			if(!string.IsNullOrEmpty(value)) contraseña = value;
+			else contraseña = string.Empty;
 		}
 	}
 	
-	private string mail;
-	public string Mail
+	private string? mail;
+	public string? Mail
 	{
 		get
 		{
@@ -85,6 +90,7 @@ public class Usuario
 		set
 		{
 			if(!string.IsNullOrEmpty(value)) mail = value;
+			else mail = string.Empty;
 		}
 	}
 	
@@ -97,7 +103,16 @@ public class Usuario
 		this.nombreUsuario = string.Empty;
 		this.contraseña = string.Empty;
 		this.mail = string.Empty;
-		Console.WriteLine("Se inicializa el constructor del usuario por defecto");
+	}
+
+	public Usuario(int _id, string _nombre, string _apellido, string _nombreUsuario, string _contraseña, string _mail)
+	{
+		this.Id = _id;
+		this.Nombre = _nombre;
+		this.Apellido = _apellido;
+		this.NombreUsuario = _nombreUsuario;
+		this.Contraseña = _contraseña;
+		this.Mail = _mail;
 	}
 
 	public override string ToString()
@@ -106,7 +121,7 @@ public class Usuario
 
 		foreach(PropertyInfo propertyInfo in this.GetType().GetProperties())
 		{
-			returnedValue += string.Format("El {0} es: {1}\n", propertyInfo.Name, propertyInfo.GetValue(this));
+			returnedValue += string.Format("El {0} de Usuario es: {1}\n", propertyInfo.Name, propertyInfo.GetValue(this));
 		}
 		return returnedValue;
 	}
