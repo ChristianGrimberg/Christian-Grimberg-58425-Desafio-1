@@ -19,6 +19,83 @@ public class Producto
 		}
 	}
 
+	private string? descripcion;
+	public string? Descripcion
+	{
+		get
+		{
+			if(string.IsNullOrEmpty(descripcion)) descripcion = "sin Descripcion";
+			return descripcion;
+		}
+		set
+		{
+			if(!string.IsNullOrEmpty(value)) descripcion = value;
+			else descripcion = string.Empty;
+		}
+	}
+
+	private decimal costo;
+	public decimal Costo
+	{
+		get
+		{
+			if(id.GetType() != typeof(decimal)) costo = 0;
+			return costo;
+		}
+		set
+		{
+			if(value.GetType() == typeof(decimal)) costo = value;
+			else costo = 0;
+		}
+	}
+
+	private decimal precioVenta;
+	public decimal PrecioVenta
+	{
+		get
+		{
+			if(id.GetType() != typeof(decimal)) precioVenta = 0;
+			return precioVenta;
+		}
+		set
+		{
+			if(value.GetType() == typeof(decimal)) precioVenta = value;
+			else precioVenta = 0;
+		}
+	}
+
+	private int stock;
+	public int Stock
+	{
+		get
+		{
+			if(id.GetType() != typeof(int)) stock = 0;
+			return stock;
+		}
+		set
+		{
+			if(value.GetType() == typeof(int)) stock = value;
+			else stock = 0;
+		}
+	}
+
+	private int idUsuario;
+	public int IdUsuario
+	{
+		get
+		{
+			if(id.GetType() != typeof(int)) idUsuario = 0;
+			return idUsuario;
+		}
+		set
+		{
+			if(value.GetType() == typeof(int)) idUsuario = value;
+			else idUsuario = 0;
+		}
+	}
+
+	public Producto() {}
+
 	public override string ToString()
 	{
 		string returnedValue = string.Empty;
