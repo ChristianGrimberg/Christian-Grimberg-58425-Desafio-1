@@ -121,7 +121,7 @@ public class Usuario
 
 		foreach(PropertyInfo propertyInfo in this.GetType().GetProperties())
 		{
-			returnedValue += string.Format("El {0} de Usuario es: {1}\n", propertyInfo.Name, propertyInfo.GetValue(this));
+			returnedValue += string.Format("{0} de {1} es: {2}\n", propertyInfo.Name, this.GetType().Name ,propertyInfo.GetValue(this));
 		}
 		return returnedValue;
 	}
