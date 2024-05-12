@@ -2,6 +2,7 @@
 .gitattributes                  export-ignore
 .github/                        export-ignore
 .editorconfig                   export-ignore
+README.md                       export-ignore
 .vscode/                        export-ignore
 .devcontainer/                  export-ignore
 **/*.cs                        linguist-language=csharp
