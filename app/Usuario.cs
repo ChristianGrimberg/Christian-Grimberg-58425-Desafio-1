@@ -45,11 +45,58 @@ public class Usuario
 			if(!string.IsNullOrEmpty(value)) apellido = value;
 		}
 	}
+
+	private string nombreUsuario;
+	public string NombreUsuario
+	{
+		get
+		{
+			if(string.IsNullOrEmpty(nombreUsuario)) nombreUsuario = "sin NombreUsuario";
+			return nombreUsuario;
+		}
+		set
+		{
+			if(!string.IsNullOrEmpty(value)) nombreUsuario = value;
+		}
+	}
+
+	private string contraseña;
+	public string Contraseña
+	{
+		get
+		{
+			if(string.IsNullOrEmpty(contraseña)) contraseña = "sin Contraseña";
+			return contraseña;
+		}
+		set
+		{
+			if(!string.IsNullOrEmpty(value)) contraseña = value;
+		}
+	}
+	
+	private string mail;
+	public string Mail
+	{
+		get
+		{
+			if(string.IsNullOrEmpty(mail)) mail = "sin Mail";
+			return mail;
+		}
+		set
+		{
+			if(!string.IsNullOrEmpty(value)) mail = value;
+		}
+	}
+	
+
 	public Usuario()
 	{
 		this.id = 0;
 		this.nombre = string.Empty;
 		this.apellido = string.Empty;
+		this.nombreUsuario = string.Empty;
+		this.contraseña = string.Empty;
+		this.mail = string.Empty;
 		Console.WriteLine("Se inicializa el constructor del usuario por defecto");
 	}
 
