@@ -24,7 +24,7 @@ public class ProductoVendido
 	{
 		get
 		{
-			if(id.GetType() != typeof(int)) idProducto = 0;
+			if(idProducto.GetType() != typeof(int)) idProducto = 0;
 			return idProducto;
 		}
 		set
@@ -39,7 +39,7 @@ public class ProductoVendido
 	{
 		get
 		{
-			if(id.GetType() != typeof(int)) stock = 0;
+			if(stock.GetType() != typeof(int)) stock = 0;
 			return stock;
 		}
 		set
@@ -54,7 +54,7 @@ public class ProductoVendido
 	{
 		get
 		{
-			if(id.GetType() != typeof(int)) idVenta = 0;
+			if(idVenta.GetType() != typeof(int)) idVenta = 0;
 			return idVenta;
 		}
 		set

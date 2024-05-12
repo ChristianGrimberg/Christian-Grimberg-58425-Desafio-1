@@ -39,7 +39,7 @@ public class Venta
 	{
 		get
 		{
-			if(id.GetType() != typeof(int)) idUsuario = 0;
+			if(idUsuario.GetType() != typeof(int)) idUsuario = 0;
 			return idUsuario;
 		}
 		set

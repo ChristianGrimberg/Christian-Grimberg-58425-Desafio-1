@@ -34,32 +34,32 @@ public class Producto
 		}
 	}
 
-	private decimal costo;
-	public decimal Costo
+	private float costo;
+	public float Costo
 	{
 		get
 		{
-			if(id.GetType() != typeof(decimal)) costo = 0;
+			if(costo.GetType() != typeof(float)) costo = 0;
 			return costo;
 		}
 		set
 		{
-			if(value.GetType() == typeof(decimal)) costo = value;
+			if(value.GetType() == typeof(float)) costo = value;
 			else costo = 0;
 		}
 	}
 
-	private decimal precioVenta;
-	public decimal PrecioVenta
+	private float precioVenta;
+	public float PrecioVenta
 	{
 		get
 		{
-			if(id.GetType() != typeof(decimal)) precioVenta = 0;
+			if(precioVenta.GetType() != typeof(float)) precioVenta = 0;
 			return precioVenta;
 		}
 		set
 		{
-			if(value.GetType() == typeof(decimal)) precioVenta = value;
+			if(value.GetType() == typeof(float)) precioVenta = value;
 			else precioVenta = 0;
 		}
 	}
@@ -69,7 +69,7 @@ public class Producto
 	{
 		get
 		{
-			if(id.GetType() != typeof(int)) stock = 0;
+			if(stock.GetType() != typeof(int)) stock = 0;
 			return stock;
 		}
 		set
@@ -84,7 +84,7 @@ public class Producto
 	{
 		get
 		{
-			if(id.GetType() != typeof(int)) idUsuario = 0;
+			if(idUsuario.GetType() != typeof(int)) idUsuario = 0;
 			return idUsuario;
 		}
 		set
@@ -96,7 +96,7 @@ public class Producto
 
 	public Producto() {}
 
-	public Producto(int _id, string _descripcion, decimal _costo, decimal _precioVenta, int _stock, int _idUsuario)
+	public Producto(int _id, string _descripcion, float _costo, float _precioVenta, int _stock, int _idUsuario)
 	{
 		this.Id = _id;
 		this.Descripcion = _descripcion;
