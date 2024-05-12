@@ -1,3 +1,5 @@
+[![.NET](https://github.com/ChristianGrimberg/Christian-Grimberg-58425-Desafio-1/actions/workflows/dotnet.yml/badge.svg)](https://github.com/ChristianGrimberg/Christian-Grimberg-58425-Desafio-1/actions/workflows/dotnet.yml)
+
 # Desafío 1: Primeros pasos
 
 Crear las clases del proyecto final
