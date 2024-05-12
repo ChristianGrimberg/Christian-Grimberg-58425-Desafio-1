@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         Usuario usuario1 = new(1,"Juan","Perez","juan.perez","1234","juan.perez@mail.com");
-        Producto producto1 = new(1, "Computadora", 1000000.00f, 1500000.00f, 10, 1);
+        Producto producto1 = new(1, "Computadora", 1000000, 1500000, 10, 1);
         ProductoVendido productoVendido1 = new(1, 1, 2, 1);
         Venta venta1 = new(1, "2 x Computadora", 1);
 

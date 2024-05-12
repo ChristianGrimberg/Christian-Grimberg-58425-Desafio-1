@@ -34,32 +34,32 @@ public class Producto
 		}
 	}
 
-	private float costo;
-	public float Costo
+	private decimal costo;
+	public decimal Costo
 	{
 		get
 		{
-			if(costo.GetType() != typeof(float)) costo = 0;
+			if(costo.GetType() != typeof(decimal)) costo = 0;
 			return costo;
 		}
 		set
 		{
-			if(value.GetType() == typeof(float)) costo = value;
+			if(value.GetType() == typeof(decimal)) costo = value;
 			else costo = 0;
 		}
 	}
 
-	private float precioVenta;
-	public float PrecioVenta
+	private decimal precioVenta;
+	public decimal PrecioVenta
 	{
 		get
 		{
-			if(precioVenta.GetType() != typeof(float)) precioVenta = 0;
+			if(precioVenta.GetType() != typeof(decimal)) precioVenta = 0;
 			return precioVenta;
 		}
 		set
 		{
-			if(value.GetType() == typeof(float)) precioVenta = value;
+			if(value.GetType() == typeof(decimal)) precioVenta = value;
 			else precioVenta = 0;
 		}
 	}
@@ -96,7 +96,7 @@ public class Producto
 
 	public Producto() {}
 
-	public Producto(int _id, string _descripcion, float _costo, float _precioVenta, int _stock, int _idUsuario)
+	public Producto(int _id, string _descripcion, decimal _costo, decimal _precioVenta, int _stock, int _idUsuario)
 	{
 		this.Id = _id;
 		this.Descripcion = _descripcion;
