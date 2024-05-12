@@ -66,6 +66,14 @@ public class ProductoVendido
 
 	public ProductoVendido() {}
 
+	public ProductoVendido(int _id, int _idProducto, int _stock, int _idVenta)
+	{
+		this.Id = _id;
+		this.IdProducto = _idProducto;
+		this.Stock = _stock;
+		this.idVenta = _idVenta;
+	}
+
 	public override string ToString()
 	{
 		string returnedValue = string.Empty;
