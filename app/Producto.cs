@@ -96,6 +96,16 @@ public class Producto
 
 	public Producto() {}
 
+	public Producto(int _id, string _descripcion, decimal _costo, decimal _precioVenta, int _stock, int _idUsuario)
+	{
+		this.Id = _id;
+		this.Descripcion = _descripcion;
+		this.Costo = _costo;
+		this.PrecioVenta = _precioVenta;
+		this.Stock = _stock;
+		this.IdUsuario = _idUsuario;
+	}
+
 	public override string ToString()
 	{
 		string returnedValue = string.Empty;
