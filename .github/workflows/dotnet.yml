@@ -4,10 +4,15 @@
 name: .NET
 
 on:
+  workflow_dispatch:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    paths:
+    - '**.cs'
+    - '**.csproj'
+    - '**.sln'
+    - '**.dll'
+    - '.editorconfig'
+    - './github/workflows/dotnet-tasks.yml'
 
 jobs:
   build:
