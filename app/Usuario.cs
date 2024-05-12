@@ -93,17 +93,8 @@ public class Usuario
 			else mail = string.Empty;
 		}
 	}
-	
 
-	public Usuario()
-	{
-		this.id = 0;
-		this.nombre = string.Empty;
-		this.apellido = string.Empty;
-		this.nombreUsuario = string.Empty;
-		this.contraseña = string.Empty;
-		this.mail = string.Empty;
-	}
+	public Usuario() {}
 
 	public Usuario(int _id, string _nombre, string _apellido, string _nombreUsuario, string _contraseña, string _mail)
 	{
